@@ -1,0 +1,83 @@
+body {
+	width: 100vw;
+	height: 100vh;
+	margin: 0;
+	box-sizing: border-box;
+	padding: 10%;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#controls {
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+canvas {
+	border: 1px solid black;
+}
+
+#display {
+	/*display: flex;*/
+}
+
+#sensors {
+	display: flex;
+	gap: 5px;
+}
+
+.sensor {
+	background: red;
+	width: 20px;
+	height: 20px;
+}
+
+#controls-ml {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	opacity: 0;
+	padding-top: 20px;
+}
+
+.sliderDisplay {
+	display: flex;
+	flex-direction: column;
+
+	width: 100px;
+}
+
+.sliderDisplay label {
+	display: flex;
+	justify-content: space-between;
+}
+
+#breed-display {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	width: 100%;
+	padding-top: 10px;
+}
+
+#breed-stats {
+	width: 100%;
+	flex: 1;
+}
+
+#breed-stats div {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}

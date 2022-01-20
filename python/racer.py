@@ -1,14 +1,7 @@
-"""Lessons learned:
-- better performance when output of nn matches output of human (i.e. press left, right, no press vs. continuous acceleration output)
-- train each generation on the same track
-- design a track that weeds out the dumb nn's fast (i.e. serpentine track)
-- better performance with 4 layers vs. three
-- good performance when initial mutation rate is high (0.5)
-"""
-from Tkinter import *
+from tkinter import *
 import numpy as np
 import time, pickle, pdb
-import IPython as ipy
+
 from neural_net import NeuralNet
 
 def ray_intersection(p1, d1, p2, d2):
@@ -347,8 +340,8 @@ def train(rg, v1, v2, m3, v3):
 			best_neural_net = children[mom_index]
 			best_fitness = mom_fitness
 		generation += 1
-		print "Generation {}:".format(generation)
-		print "Mom fitness: {}\tDad fitness {}".format(mom_fitness, dad_fitness)
+		print("Generation {}:".format(generation))
+		print("Mom fitness: {}\tDad fitness {}".format(mom_fitness, dad_fitness))
 	return best_neural_net
 
 

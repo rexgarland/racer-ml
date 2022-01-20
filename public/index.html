@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Racer</title>
+	<link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+	<div id="container">
+		<h1>Racer</h1>
+		<div id="track">
+			<canvas id="canvas" width="100" height="200"></canvas>
+			<div id="sensors"></div>
+		</div>
+		<div id="controls">
+			<div id="controls-mode">
+				<select id="mode">
+					<option value="user">User</option>
+					<option value="robot">Robot</option>
+				</select>
+				<button id="playPause">Play</button>
+			</div>
+			<div id="controls-ml">
+				<div class="sliderDisplay">
+					<label for="num">Population: <span id="num-display">10</span></label>
+					<input type="range" min="2" max="100" value="10" class="slider" id="num">
+				</div>
+				<div class="sliderDisplay">
+					<label for="rate">Rate: <span id="rate-display">0.1</span></label>
+					<input type="range" min="-300" max="0" value="-100" class="slider" id="rate">
+				</div>
+				<div class="sliderDisplay">
+					<label for="variance">Variance: <span id="variance-display">0.1</span></label>
+					<input type="range" min="-300" max="600" value="-100" class="slider" id="variance">
+				</div>
+				<div id="breed-display">
+					<button id="breed">Breed</button>
+					<div id="breed-stats">
+						<div>Iter: <span id="breed-iteration">0</span></div>
+						<div>Score: <span id="breed-score">0</span></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="fitness"></div>
+		<div id="nn"></div>
+	</div>
+</body>
+
+<script src="bundle.js"></script>
+
+</html>

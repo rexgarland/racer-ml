@@ -1,0 +1,28 @@
+{
+  "name": "racer-ml",
+  "version": "1.0.0",
+  "description": "This is a toy problem for practice with machine learning: * a little triangle \"racer\" is traveling through space * there are blocks in its way... it needs to maneuver to avoid collisions * It's controls are thrust left and thrust right (acceleration.x). It's velocity.y is constant. * It's sensors are an array of distance sensors spread out at equal angles (like a fan). * It must learn to avoid the blocks by adjusting its neural net parameters over multiple runs.",
+  "main": "index.js",
+  "scripts": {
+    "build": "mkdir -p dist && rsync --delete -r public/ dist && browserify src/index.js -o dist/bundle.js",
+    "watch": "chokidar --initial \"public\" \"src\" -c \"npm run build\"",
+    "start": "concurrently \"npm run watch\" \"http-server dist -o\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rexgarland/racer-ml.git"
+  },
+  "keywords": [],
+  "author": "Rex Garland <rex@rexgarland.dev> (https://rexgarland.dev/)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rexgarland/racer-ml/issues"
+  },
+  "homepage": "https://github.com/rexgarland/racer-ml#readme",
+  "dependencies": {
+    "browserify": "^17.0.0",
+    "chokidar": "^3.5.3",
+    "concurrently": "^7.0.0"
+  }
+}
