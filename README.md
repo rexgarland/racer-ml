@@ -9,6 +9,8 @@ This is a toy problem for practice with machine learning:
 
 I used a genetic algorithm to search parameter space and train the racer's brain, which is just a fully-connected neural net with layers dimensions [5,4,9,3]. The output layer's argmax is used to determine thrust: [-1,0,1].
 
+[Demo](https://loving-franklin-cd80e8.netlify.app)
+
 ![training](images/racer.gif)
 
 ## Install
