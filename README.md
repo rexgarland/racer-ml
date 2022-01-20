@@ -11,7 +11,19 @@ I used a genetic algorithm to search parameter space and train the racer.
 
 ![training](images/racer.gif)
 
-## 
+## Install
+
+```shell
+npm install
+```
+
+## Usage
+
+```shell
+npm start
+```
+
+You play it yourself in "User" mode: use the left and right arrow keys to thrust the racer. Then, try running the genetic algorithm in "Robot" mode. After each iteration, you can test out the resulting racer by clicking "Start".
 
 ## Lessons learned:
 
